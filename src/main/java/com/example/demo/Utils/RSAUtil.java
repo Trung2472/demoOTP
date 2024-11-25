@@ -1,5 +1,7 @@
 package com.example.demo.Utils;
 
+import com.warrenstrange.googleauth.GoogleAuthenticator;
+import com.warrenstrange.googleauth.GoogleAuthenticatorKey;
 import io.micrometer.common.util.StringUtils;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -10,6 +12,7 @@ import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
+import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
 import java.security.*;
 import java.security.spec.InvalidKeySpecException;
@@ -60,5 +63,41 @@ public class RSAUtil {
         return "";
     }
 
+    // Chuyển đổi private key thành định dạng PEM
+    public static String privateKeyToPEM(PrivateKey privateKey) {
+        StringWriter stringWriter = new StringWriter();
+        try (PemWriter pemWriter = new PemWriter(stringWriter)) {
+            pemWriter.writePrivateKey(privateKey.getEncoded());
+        } catch (Exception e) {
+            log.error("error when generate private key", e);
+        }
+        return stringWriter.toString();
+    }
+
+
+    public static void main(String[] args) {
+        GoogleAuthenticator gAuth = new GoogleAuthenticator();
+
+        // Tạo khóa bí mật
+        GoogleAuthenticatorKey key = gAuth.createCredentials();
+        System.out.println("Secret Key: " + key.getKey());
+
+        // Tạo mã OTP dựa trên TOTP
+        int otp = gAuth.getTotpPassword(key.getKey());
+        System.out.println("Generated TOTP: " + otp);
+
+        // Kiểm tra OTP với TOTP
+        boolean isValid = gAuth.authorize(key.getKey(), otp);
+        System.out.println("Is the OTP valid? " + isValid);
+
+        // HOTP Example: Kiểm tra mã HOTP dựa trên counter
+        int counter = 121515;
+        otp = gAuth.getTotpPassword(key.getKey(), counter);
+        System.out.println("Generated HOTP for counter " + counter + ": " + otp);
+
+        // Kiểm tra tính hợp lệ của HOTP
+        isValid = gAuth.authorize(key.getKey(), otp, counter);
+        System.out.println("Is the HOTP valid? " + isValid);
+    }
 
 }
