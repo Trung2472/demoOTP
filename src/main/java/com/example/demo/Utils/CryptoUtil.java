@@ -15,7 +15,7 @@ import java.security.spec.X509EncodedKeySpec;
 import java.util.Base64;
 import java.util.Random;
 
-import static com.example.demo.Utils.RSAUtil.generateKeyPair;
+import static com.example.demo.Utils.RSAUtil1.generateKeyPair;
 import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class CryptoUtil {
@@ -171,7 +171,7 @@ public class CryptoUtil {
         CryptoUtil.publicKey = publicKeyStr;
 
         String privateKeyStr = Base64.getEncoder().encodeToString(privateKey.getEncoded());
-        String pemPK = RSAUtil.privateKeyToPEM(privateKey);
+        String pemPK = RSAUtil1.privateKeyToPEM(privateKey);
         System.out.println("Private Key (pemPK): " + pemPK);
         CryptoUtil.privateKey = privateKeyStr;
     }
