@@ -1,7 +1,5 @@
 package com.example.demo.Utils;
 
-import com.warrenstrange.googleauth.GoogleAuthenticator;
-import com.warrenstrange.googleauth.GoogleAuthenticatorKey;
 import io.micrometer.common.util.StringUtils;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -74,30 +72,45 @@ public class RSAUtil1 {
         return stringWriter.toString();
     }
 
+    //        GoogleAuthenticator gAuth = new GoogleAuthenticator();
+//
+//        // Tạo khóa bí mật
+//        GoogleAuthenticatorKey key = gAuth.createCredentials();
+//        System.out.println("Secret Key: " + key.getKey());
+//
+//        // Tạo mã OTP dựa trên TOTP
+//        int otp = gAuth.getTotpPassword(key.getKey());
+//        System.out.println("Generated TOTP: " + otp);
+//
+//        // Kiểm tra OTP với TOTP
+//        boolean isValid = gAuth.authorize(key.getKey(), otp);
+//        System.out.println("Is the OTP valid? " + isValid);
+//
+//        // HOTP Example: Kiểm tra mã HOTP dựa trên counter
+//        int counter = 121515;
+//        otp = gAuth.getTotpPassword(key.getKey(), counter);
+//        System.out.println("Generated HOTP for counter " + counter + ": " + otp);
+//
+//        // Kiểm tra tính hợp lệ của HOTP
+//        isValid = gAuth.authorize(key.getKey(), otp, counter);
+//        System.out.println("Is the HOTP valid? " + isValid);
+    public static void main(String[] args) throws Exception {
 
-    public static void main(String[] args) {
-        GoogleAuthenticator gAuth = new GoogleAuthenticator();
+        KeyPair keyPair = generateKeyPair();
 
-        // Tạo khóa bí mật
-        GoogleAuthenticatorKey key = gAuth.createCredentials();
-        System.out.println("Secret Key: " + key.getKey());
+        PublicKey publicKey = keyPair.getPublic();
+        String publicKeyStr = new String(Base64.getEncoder().encode(publicKey.getEncoded()), StandardCharsets.UTF_8);
+        System.out.println("Public Key: " + publicKeyStr);
+        CryptoUtil.publicKey = publicKeyStr;
 
-        // Tạo mã OTP dựa trên TOTP
-        int otp = gAuth.getTotpPassword(key.getKey());
-        System.out.println("Generated TOTP: " + otp);
+        PrivateKey privateKey = keyPair.getPrivate();
+        byte[] privateKeyByte = Base64.getEncoder().encode(privateKey.getEncoded());
+        String privateKeyStr = new String(privateKeyByte, StandardCharsets.UTF_8);
+        System.out.println("Private Key: \n" + privateKeyStr);
+        String pemPK = RSAUtil1.privateKeyToPEM(privateKey);
+        System.out.println("Private Key (pemPK): \n" + pemPK);
+        CryptoUtil.privateKey = privateKeyStr;
 
-        // Kiểm tra OTP với TOTP
-        boolean isValid = gAuth.authorize(key.getKey(), otp);
-        System.out.println("Is the OTP valid? " + isValid);
-
-        // HOTP Example: Kiểm tra mã HOTP dựa trên counter
-        int counter = 121515;
-        otp = gAuth.getTotpPassword(key.getKey(), counter);
-        System.out.println("Generated HOTP for counter " + counter + ": " + otp);
-
-        // Kiểm tra tính hợp lệ của HOTP
-        isValid = gAuth.authorize(key.getKey(), otp, counter);
-        System.out.println("Is the HOTP valid? " + isValid);
     }
 
 }

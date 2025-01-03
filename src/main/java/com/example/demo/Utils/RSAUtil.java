@@ -198,7 +198,7 @@ public class RSAUtil {
         HashingAlgorithm(String algorithm) {
             this.algorithm = algorithm;
         }
-        public static HashingAlgorithm of(@NotNull HmacHashFunction algorithm) {
+        public static HashingAlgorithm of(HmacHashFunction algorithm) {
             switch (algorithm) {
                 case HmacSHA1 -> {
                     return SHA_1;

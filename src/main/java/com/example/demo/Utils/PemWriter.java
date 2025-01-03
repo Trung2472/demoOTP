@@ -3,6 +3,7 @@ package com.example.demo.Utils;
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.Writer;
+import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.Collections;
 import java.util.Map;
@@ -48,8 +49,8 @@ public class PemWriter extends BufferedWriter {
     }
 
     private void writeEncoded(byte[] var1) throws IOException {
-        String var2 = Base64.getEncoder().encodeToString(var1);
-        this.write(var2, 0, var1.length);
+        byte[] var2 = Base64.getEncoder().encode(var1);
+        this.write(new String(var2, StandardCharsets.UTF_8), 0, var2.length);
         this.newLine();
     }
 

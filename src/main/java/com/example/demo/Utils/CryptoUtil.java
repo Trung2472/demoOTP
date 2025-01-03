@@ -28,7 +28,9 @@ public class CryptoUtil {
     public static String publicKey =
             "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlynlQjAh2pzdHwSRHIZj+HeOf+lqiSeOmG69ah3RvwbcbkrvxzF5f8+FevIN/q8R17NoOiNpIMeHZAL1BDlHw2Hek66bycoYFWcOWykzBSOU4ccrG1dgX7gzLHCIGiR5dtG5UdwVJ1vff7YUmFcDjc97sA8elTv9pGqzlEFJLiN939IWk+2GK3wVtBXlfUBKf8b366I+PWqSUIPSHqWZkWSwkA5LbMbi2wUi/RpsyREZ4kToPM9FFGGoFyb7zCw6SBLjpJJLaZaUy/kfjHGObSBvIaguFO22s84DCcrZWlIRn9kgPuICrll8jm/yfvhQP42LooWkC114fUCTffjLAQIDAQAB";
     public static String privateKey =
-            "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCXKeVCMCHanN0fBJEchmP4d45/6WqJJ46Ybr1qHdG/BtxuSu/HMXl/z4V68g3+rxHXs2g6I2kgx4dkAvUEOUfDYd6TrpvJyhgVZw5bKTMFI5ThxysbV2BfuDMscIgaJHl20blR3BUnW99/thSYVwONz3uwDx6VO/2karOUQUkuI33f0haT7YYrfBW0FeV9QEp/xvfroj49apJQg9IepZmRZLCQDktsxuLbBSL9GmzJERniROg8z0UUYagXJvvMLDpIEuOkkktplpTL+R+McY5tIG8hqC4U7bazzgMJytlaUhGf2SA+4gKuWXyOb/J++FA/jYuihaQLXXh9QJN9+MsBAgMBAAECggEAFqCM0rWFu8WTS9tRJWXwfPbYe8kiy1kCfUrGS6YfCWsrf87zyWtcdodHwbmN4rut/g264kj+qYt0dsICjxlL5rE1sgGHDFOV+04r1fV6z6Ad3xYDG9qecHWQI2zM0qz3CZQnG1vIRtX3xJQqzQrpW0bdiuMYfto2A3B9ZQnIvIEUp4t0gmikgCK7Z/cK3iqnRSEWG6o6AO0GlT3tpDLBA7Wx8K9VbWB0ZAl0jEQmkl3XfzncaVWM3yfwkSKaDniwYhUJ64H3yN+a5S7alACreckFRIeF5SFpc4TfrBDUAWb/7S/6iEomJWii7MEaDnAQ1cmsgwpseBvHhvP6SWY5yQKBgQDDZf5lbagvVFa40jxOojhwJrSN58NI1iV8B5bIIoMKAiQzFd+5lm1/DG+4IiX2g/1zay1L0E8oBjVUeZbmIdFYSgnj7eGWAOYz1xCRuE1KSGOAzmpH+teSuYIdwvM/Y8D77pcC10X3/sodw+J7LtQV2owPO773oMT6bBrvj/QBFwKBgQDGC83YWVYfBvk4fIjGXuEW1/4hqGwlSQYoIJ7ik7BwLigtj9xCsjxTP9fyTMREac8S8ZpO8LPvNnGk9EZb4ywYxf8VGRMOX6z+CG9EUgwq0ZVyVF6PSkcHZ5PI3CZAmuRZESMEFbP8gE5iCwIylrOQuS15xfL/Owrn8dhP6t+zpwKBgGoNR3/hfnEBw3fYk2bSYPNt7n0+lx1HLV0d+VZydNDPzLn1W1ItNQzJwTEdR6F+jedA+nq1euDsTbGltKL/I9JZjPiquc9ieY8VYSbV8w0oMOlOHx0mJi66hMaGcuOqzqluG4QtNwqcvTJeiOP2zKF31qDF+qYIGiEY3526ceLNAoGAPT6rQqul6WRzr9c7SPVQcIsNKQV3pDQn9kLYP8Nifd6YSDbD69BIvYnx0xmQXIPIKNiUWrMvQdu5W0S7eXEQUvzv/GtLrFdEHS8okZ057AfySm/y6icTPiP23NfP8Iy17yFQjdPUXFKlasZywIhAMZJCkPT5R5rPrZjpxxUgZuMCgYEApG6E0txTFFg7+Nht2/alsJWTB5YwyaWr6RFA0m518rHgpcJhJiPN8cipV/6d82nxn/r3sICtxu/ja8xZRYNLnqvCj+3WahBhsUt4PTLCX01/vpXSN9dGeT79XvktrlpB+18FHhOmVWm66xukfI45yZ7dtPAivzjLlDgm9itrOgs=";
+            "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC0gnFWUBgcdCTEPj1/enwkypF3h8nnFnHJQ7YAL+PZLTevX962zxV1cA2pqiYgPTo/6wqMpJ/DqjpPT1egmTaJW80cxiy/PKqt/+eH/dJdpbSr4sWDfJAIC4Z7sigu9x0M2YKvTQHJRJiu4LUw5mnQuUieJ2kDRfaIwf8RQMsGGWiuCmF2ObndSZUw2eOJl4PVnhG+QM4eF23NZSPCT2MLcNjZfHDM51zdmx+1avci7i46FE/FVqaHIrVq3vF4rrfjX3RYsvQkXc9QEsqKBa3f1vl7rj1pis6T60Lo8X5N8zBar5Rf3PZHxdWt/Gq4vUM49hwz6GKa8UuQ9DosAD7lAgMBAAECggEAITlTIAZc8bvE2qP0EMccG293Z89D77c3WUqPsKgf4WTLt4lHRlGGSxfFRAGvw8ZRNtuNlQZl648k7V0WrVYV7iFJ9u5Y5RgG+EC+Pk8PDbKGtw5luUZPglOQvKq1b7OHEsrkHVzoo8Fu8t0kLGx0dHjt70Ikt3gEoPZH+sZ4t9XcYkBDu7NmUziiCF9Zw6SbpKqNQj8k9jiZXHcs5i+QeVwlCDQ18+LHtMTi020j5QBZqpAbDg7LlxD+gJigeNAGGvGOMYcprfQYA/qKI1V8CnnXDXUqbANWyYPsuczzKvxdlpN/OKrvFsFae8ogzhcQi9TdHQzGATj8cf9xIMhgHwKBgQD5yox08wo4swhD5K2pFtMYuxvYe8PMnonWdAffny6SspzcQ0t4P2ZJ+seAWOuqA2bEXP3x2Y2Zb3G5IbC/XV+TXYj9yT02D5i2UDTCL7HORsgVVwl0d90qelxAknf0PVoy1Dug4PtH9doEe8t9Rc/dbtZiXYiSlYdENTATz0RmQwKBgQC4/wvqU8VhIG4MwiccWAo0FpbE2KmyVw8G/YArgCCTtw4Fz6sHz1UWayjyXh8c3AkHOM543tpt8hqe2b9WRYgw+H2RixzAO5daQg9fhzYUS4CBv3hQq7DJRlAhqGmJugS8pfpDkNUvlYRZ2LwSoyM/YOSBP6cA2CKyAuXsWwZ3twKBgQCO2XW/v+ndiQ01/oYNx/7LCt4ezJCp6RR8rvh9u0PgIwMvt9BmISO3NRJ4ZOHI5Y8UxvV3JOokkCYiMJEqrxRkaz5XnIlD7GFyCaZSUwJFLBdqlM7Ua2Pw0e8GAn1VEO0PWm4LT/6EJaYboEw8BPud76/sqv7ajWbA7AXlnkfIjwKBgGjfLMIJ+zq0R66z4bgPsLkWlSHCMXEIKVytGJuQZudWPnzM3QfwYSv0U6IR+VFC61tMuL+Mlgb92Fl01yLxB+O6+nQniITxQzvHdy+QVvfqVU84W9xfeDihw4tRDYMmEMlgzh6/XBs9h2nnk7Z9BN5I70DV9LZl0EVZnz393AzBAoGAGC5O2+s+lYocYs6ghakEocr0qMiWsj2CeymH81JomYrvSrcuj2V4iOK54T7xjqWsBzAvMT91HSs7kL/QdXrLfNmS54NUpwwbFpeCmgMWhxWeQ7APDpoAByryk+9upxLuiaLQBfhc5siCQ3eIAdg3km6YWtnaSwoMm6rN0JmSPtY=";
+
+
 
     public static PublicKey getPublicKey(String base64PublicKey) {
         byte[] publicKeyBytes = Base64.getDecoder().decode(base64PublicKey);
@@ -46,7 +48,7 @@ public class CryptoUtil {
     }
 
     public static PrivateKey getPrivateKey(String base64PrivateKey) {
-        byte[] publicKeyBytes = Base64.getDecoder().decode(base64PrivateKey);
+        byte[] publicKeyBytes = Base64.getDecoder().decode(base64PrivateKey.getBytes(UTF_8));
         return getPrivateKey(publicKeyBytes);
     }
 
@@ -74,36 +76,14 @@ public class CryptoUtil {
         return Base64.getEncoder().encodeToString(encrypt(data, publicKey));
     }
 
-    public static String decrypt(byte[] data, PrivateKey privateKey)
-            throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException, BadPaddingException,
-            IllegalBlockSizeException {
-        Cipher cipher = Cipher.getInstance(CIPHER_TRANSFORMATION);
-        cipher.init(Cipher.DECRYPT_MODE, privateKey);
-        return new String(cipher.doFinal(data));
-    }
-
-    public static String decrypt(byte[] data, Key privateKey)
-            throws NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeyException, BadPaddingException,
-            IllegalBlockSizeException {
-        Cipher cipher = Cipher.getInstance(CIPHER_TRANSFORMATION);
-        cipher.init(Cipher.DECRYPT_MODE, privateKey);
-        return new String(cipher.doFinal(data));
-    }
-
-    public static String decrypt(String data, String base64PrivateKey)
-            throws IllegalBlockSizeException, InvalidKeyException, BadPaddingException, NoSuchAlgorithmException,
-            NoSuchPaddingException {
-        return decrypt(Base64.getDecoder().decode(data.getBytes()), getPrivateKey(base64PrivateKey));
-    }
-
     public static String sign(String plainText, PrivateKey privateKey) throws Exception {
-        Signature privateSignature = Signature.getInstance("SHA1withRSA");
+        Signature privateSignature = Signature.getInstance("SHA256withRSA");
         privateSignature.initSign(privateKey);
         privateSignature.update(plainText.getBytes(UTF_8));
 
         byte[] signature = privateSignature.sign();
 
-        return Base64.getEncoder().encodeToString(signature);
+        return new String(Base64.getEncoder().encode(signature), UTF_8);
     }
 
     public static boolean verify(String plainText, String signature, PublicKey publicKey) throws Exception {
@@ -111,40 +91,30 @@ public class CryptoUtil {
         publicSignature.initVerify(publicKey);
         publicSignature.update(plainText.getBytes(UTF_8));
 
-        byte[] signatureBytes = Base64.getDecoder().decode(signature);
+        byte[] signatureBytes = Base64.getDecoder().decode(signature.getBytes(UTF_8));
 
         return publicSignature.verify(signatureBytes);
     }
 
-    public static void main(String[] args) {
-//        addNewKey();
-//        int otpLength = 8;
-//        int otpVariable = (int) Math.pow(10, otpLength);
-//        try {
-//            String encryptedString = encryptToBase64("245987", publicKey);
-//            System.out.println("encryptedString: " + encryptedString);
-//            String decryptedString = decrypt(encryptedString, privateKey);
-//            System.out.println("decryptedString = " + decryptedString);
-//            //HOTP
-//            byte[] hmacResult = new HmacUtils(HmacAlgorithms.HMAC_SHA_512, "dhsjdaks")
-//                    .hmac("3215462");
-//            // Cắt ngắn HMAC (trích xuất 4 byte từ HMAC và tính OTP)
-//            int offset = hmacResult[hmacResult.length - 1] & 0x0F;
-//            int otp = ((hmacResult[offset] & 0x7F) << 24)
-//                    | ((hmacResult[offset + 1] & 0xFF) << 16)
-//                    | ((hmacResult[offset + 2] & 0xFF) << 8)
-//                    | (hmacResult[offset + 3] & 0xFF);
-//
-//            // Trả về OTP (giới hạn giá trị OTP trong 6 chữ số)
-//
-//            String abc = String.format("%0"+otpLength+"d", otp%otpVariable);
-//            System.out.println("HOTP: " + abc);
-//        } catch (Exception e) {
-//            System.err.println(e.getMessage());
-//        }
+    public static volatile PrivateKey PRIVATE_KEY;
+    public static void main(String[] args) throws Exception {
 
-        String a = generateOTP(6);
-        System.out.println("otp: " + a);
+//        addNewKey();
+        String a = sign("ThisIsSparta", getPrivateKey(privateKey));
+
+        System.out.println("sign: \n" + a);
+    }
+
+    private static void addPrivateKey() throws NoSuchAlgorithmException {
+        if (PRIVATE_KEY == null) {
+            synchronized (CryptoUtil.class) {
+                if (PRIVATE_KEY == null) {
+                    KeyPair keyPair = generateKeyPair();
+                    PRIVATE_KEY = keyPair.getPrivate();
+                }
+            }
+        }
+
     }
 
     public static String generateOTP(int length) {
@@ -164,15 +134,17 @@ public class CryptoUtil {
 
     private static void addNewKey() throws NoSuchAlgorithmException {
         KeyPair keyPair = generateKeyPair();
-        PrivateKey privateKey = keyPair.getPrivate();
+
         PublicKey publicKey = keyPair.getPublic();
-        String publicKeyStr = Base64.getEncoder().encodeToString(publicKey.getEncoded());
+        String publicKeyStr = new String(Base64.getEncoder().encode(publicKey.getEncoded()), UTF_8);
         System.out.println("Public Key: " + publicKeyStr);
         CryptoUtil.publicKey = publicKeyStr;
 
-        String privateKeyStr = Base64.getEncoder().encodeToString(privateKey.getEncoded());
-        String pemPK = RSAUtil1.privateKeyToPEM(privateKey);
-        System.out.println("Private Key (pemPK): " + pemPK);
+        PrivateKey privateKey = keyPair.getPrivate();
+        String privateKeyStr = new String(Base64.getEncoder().encode(privateKey.getEncoded()), UTF_8);
+        System.out.println("Private Key: " + privateKeyStr);
+//        String pemPK = RSAUtil1.privateKeyToPEM(privateKey);
+//        System.out.println("Private Key (pemPK): " + pemPK);
         CryptoUtil.privateKey = privateKeyStr;
     }
 
